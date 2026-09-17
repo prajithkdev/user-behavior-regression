@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+.DS_Store
+Thumbs.db
+
+# Raw ecommerce dataset (~100MB) — download separately, see README
+eventsEcommerce.csv
