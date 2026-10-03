@@ -78,12 +78,6 @@ On a 20,000-row sample (80/20 train/test split, `random_state=42`), predicting `
 
 All four models perform similarly poorly — this isn't one weak model among strong ones, it's a genuine ceiling on what these particular features can predict.
 
-## What I'd do next
-
-- Add `product_id`-level aggregates (e.g., a product's historical median price) — the actual product identity is almost certainly the real driver of price that category/brand only approximate.
-- Try predicting `log(price)` instead of raw price — ecommerce prices are typically right-skewed, and a log transform often helps linear models specifically.
-- Compare against a trivial "predict the category's mean price" baseline, to see how much of the ~5% R² even the simple models achieve is just recovering category-level price differences.
-
 ## Background
 
 Originally a team assignment (ALY6040, Northeastern University) in R; the original code never produced a working result. Rebuilt from scratch in Python against the same real dataset for this portfolio.
